@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>صفحة ثانية - غزة</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      font-family: 'Andalus', serif;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: url('171.jpeg'); 
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 6vw;
+      margin-bottom: 50px;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .custom-button {
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+      border-radius: 15px;
+      padding: 15px;
+      width: 90vw;
+      max-width: 350px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custom-button:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.348);
+    }
+
+    .custom-button img {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+
+    .custom-button a {
+      font-size: 4vw;
+      max-font-size: 32px;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* تحسين العرض على الشاشات الصغيرة */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 10vw;
+      }
+
+      .custom-button a {
+        font-size: 6vw;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+  <div class="overlay"></div>
+  
+  <div class="content">
+    <h1>غزة من النواحي</h1>
+
+    <div class="buttons-container">
+      <button class="custom-button">
+        <img src="amn.png" alt="الوضع الأمني">
+        <a href="وضع الامني.html" target="_self">الوضع الأمني</a>
+      </button>
+
+      <button class="custom-button">
+        <img src="gazapep.png" alt="الوضع الإنساني">
+        <a href="وضع الانساني.html" target="_self">الوضع الإنساني</a>
+      </button>
+
+      <button class="custom-button">
+        <img src="childgaza.png" alt="الأطفال في غزة">
+        <a href="وضع الاطفال .html" target="_self">الأطفال في غزة</a>
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
